@@ -5,17 +5,21 @@
     </div>
     <div class="contanier">
       <component :is="current"></component>
+
     </div>
+     <component :is="Breadcrumbs"></component>
   </div>
 </template>
 <script>
 import hInput from '../../packages/input'
 import eInput from '../../packages/input-e'
+import Breadcrumbs from '../../packages/Breadcrumbs'
 export default {
-  components: { hInput, eInput },
+  components: { hInput, eInput, Breadcrumbs },
   data() {
     return {
-      current: 'eInput'
+      current: 'eInput',
+      Breadcrumbs: 'Breadcrumbs'
     }
   }
 }
